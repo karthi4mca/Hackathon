@@ -16,16 +16,17 @@ hackAlgorithmToFindUsername(result['encrypted']);
 function hackAlgorithmToFindUsername(encrypterPass) {
   // complete the hack to find the username for any encrypted password from authorizer.js.
   throw new Error("Missing hack to find username");
-Myarray=(encrypterPass.split("").sort());
+Myarray=encrypterPass.split("");
+Myarray=Myarray.sort();
 var currentchar = null;
 var Mycnt = 0;
-var finalResult = new Array(Myarray.length);
+var Result='';
 for (var i = 0; i <= Myarray.length; i++) {
 if (Myarray[i] != currentchar) {
     if (Mycnt > 0) {
                     var strcount=Mycnt/2;
                       for(j=0;j<strcount;j++){
-                          finalResult.push(currentchar);
+                          Result+=currentchar;
                           
                       }
                     }
@@ -37,7 +38,6 @@ if (Myarray[i] != currentchar) {
  Mycnt++;
 }
 }
-console.log('User Name :',finalResult.join(''));
- //console.log(finalResult);
+console.log('Username :',Result);
   
 }
